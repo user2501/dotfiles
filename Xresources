@@ -1,0 +1,83 @@
+URxvt.font: xft:ypn envypn:size=13
+URxvt.internalBorder: 50
+URxvt.letterSpace: 1
+Xft.dpi: 96
+Xft.antialias: true
+Xft.hinting: true
+Xft.rgba: rgb
+Xft.autohint: 0
+Xft.hintstyle: hintslight
+Xft.lcdfilter: lcddefault
+Xcursor.theme: Adwaita
+Xcursor.size: 0
+URxvt*cursorUnderline: true
+URxvt*underlineColor: #f0f0f0
+URxvt*transparent: false
+URxvt.depth: 35
+URxvt.background: #1e2324
+URxvt.foreground: #f0f0f0
+URxvt*scrollBar: false
+URxvt*scrollstyle: plain
+URxvt*scroll_right: false
+URxvt*mouseWheelScrollPage: true
+URxvt*cursorBlink: true
+URxvt*saveLines: 5000
+
+URxvt.keysym.Shift-Control-C: perl:clipboard:copy
+URxvt.keysym.Shift-Control-V: perl:clipboard:paste
+URxvt.iso14755: False
+URxvt.perl-ext-common: default,clipboard
+
+*urlLauncher: firefox
+*url-select.underline: true
+
+rofi.modi: run
+rofi.font: Roboto Mono 8
+rofi.lines: 5
+rofi.width: 25
+rofi.columns: 1
+rofi.opacity: 100
+rofi.separator-style: none
+rofi.hide-scrollbar: true
+rofi.bw: 0
+rofi.location: 0
+!rofi.xoffset: 0
+!rofi.yoffset: 0
+rofi.padding: 20
+rofi.eh: 1
+rofi.fuzzy: false
+rofi.color-enabled: true
+rofi.color-window: #1e2324, argb:0002B36, #f0f0f0
+rofi.color-normal: #1e2324, #f0f0f0, #1e2324, #2f3336, #f0f0f0
+rofi.color-active: #1e2324, #f0f0f0, #1e2324, #39474A, #f0f0f0
+rofi.color-urgent: #1e2324, #f0f0f0, #1e2324, #a66959, #f0f0f0
+
+! DEPTHMOD 
+! Special
+*.background:  #1e2324  
+*.foreground:  #f0f0f0
+*.cursorColor: #f0f0f0
+!Black
+*.color0:      #2f3336  
+*.color8:      #2f3336
+!Red  
+*.color1:      #bf6257 
+*.color9:      #bf6257
+!Green  
+*.color2:      #93988a  
+*.color10:     #93988a
+!Yellow
+*.color3:      #b7a16c  
+*.color11:     #b7a16c
+!Blue
+*.color4:      #526872  
+*.color12:     #526872
+!Magenta
+*.color5:      #8a757e  
+*.color13:     #8a757e
+!Cyan
+*.color6:      #60867f
+*.color14:     #60867f
+!White  
+*.color7:      #f0f0f0
+*.color15:     #f0f0f0
