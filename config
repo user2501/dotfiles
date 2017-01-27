@@ -178,7 +178,6 @@ set $bor #2f3336
 bar {
         status_command i3status -c ~/.config/i3/i3status.conf
     	position top
-		separator_symbol "  "
         font pango:Roboto,FontAwesome 7
 	
 	colors {
