@@ -1,6 +1,6 @@
-URxvt.font: xft:ypn envypn:size=13
+URxvt.font: xft:Hack:size=9
 URxvt.internalBorder: 50
-URxvt.letterSpace: 1
+URxvt.letterSpace: -1
 Xft.dpi: 96
 Xft.antialias: true
 Xft.hinting: true
