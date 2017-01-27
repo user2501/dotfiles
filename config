@@ -94,15 +94,15 @@ bindsym $mod+a focus parent
 #bindsym $mod+d focus child
 
 # workspace variables
-set $workspace1 "1"
-set $workspace2 "2"
-set $workspace3 "3"
-set $workspace4 "4"
-set $workspace5 "5"
-set $workspace6 "6"
-set $workspace7 "7"
-set $workspace8 "8"
-set $workspace9 "9"
+set $ws1 "1"
+set $ws2 "2"
+set $ws3 "3"
+set $ws4 "4"
+set $ws5 "5"
+set $ws6 "6"
+set $ws7 "7"
+set $ws8 "8"
+set $ws9 "9"
 
 # switch to workspace
 bindsym $mod+1 workspace 1 
@@ -178,6 +178,7 @@ set $bor #2f3336
 bar {
         status_command i3status -c ~/.config/i3/i3status.conf
     	position top
+		separator_symbol "  "
         font pango:Roboto,FontAwesome 7
 	
 	colors {
