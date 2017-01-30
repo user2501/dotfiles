@@ -1,6 +1,6 @@
-URxvt.font: xft:Hack:size=9
+URxvt.font: xft:Roboto Mono:size=9
 URxvt.internalBorder: 50
-URxvt.letterSpace: -1
+URxvt.letterSpace: 0
 Xft.dpi: 96
 Xft.antialias: true
 Xft.hinting: true
@@ -8,13 +8,12 @@ Xft.rgba: rgb
 Xft.autohint: 0
 Xft.hintstyle: hintslight
 Xft.lcdfilter: lcddefault
-Xcursor.theme: Adwaita
 Xcursor.size: 0
 URxvt*cursorUnderline: true
 URxvt*underlineColor: #f0f0f0
 URxvt*transparent: false
 URxvt.depth: 35
-URxvt.background: #1e2324
+URxvt.background: #13181b
 URxvt.foreground: #f0f0f0
 URxvt*scrollBar: false
 URxvt*scrollstyle: plain
@@ -47,14 +46,14 @@ rofi.padding: 20
 rofi.eh: 1
 rofi.fuzzy: false
 rofi.color-enabled: true
-rofi.color-window: #1e2324, argb:0002B36, #f0f0f0
-rofi.color-normal: #1e2324, #f0f0f0, #1e2324, #2f3336, #f0f0f0
-rofi.color-active: #1e2324, #f0f0f0, #1e2324, #39474A, #f0f0f0
-rofi.color-urgent: #1e2324, #f0f0f0, #1e2324, #a66959, #f0f0f0
+rofi.color-window: #13181b, argb:0002B36, #f0f0f0
+rofi.color-normal: #13181b, #f0f0f0, #13181b, #2f3336, #f0f0f0
+rofi.color-active: #13181b, #f0f0f0, #13181b, #39474A, #f0f0f0
+rofi.color-urgent: #13181b, #f0f0f0, #13181b, #a66959, #f0f0f0
 
 ! DEPTHMOD 
 ! Special
-*.background:  #1e2324  
+*.background:  #13181b  
 *.foreground:  #f0f0f0
 *.cursorColor: #f0f0f0
 !Black
