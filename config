@@ -13,7 +13,7 @@ set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
 # is used in the bar {} block below.
-font pango: Roboto 8
+font pango: Nimbus Sans 8
 
 # This font is widely installed, provides lots of unicode glyphs, right-to-left
 # text rendering and scalability on retina/hidpi displays (thanks to pango).
@@ -129,7 +129,7 @@ bindsym $mod+Shift+9 move container to workspace 9
 #bindsym $mod+Shift+0 move container to workspace 10
 
 #Lockscreen
-bindsym $mod+Shift+0 exec bash lock
+#bindsym $mod+Shift+0 exec bash lock
 
 #Screenshot
 bindsym Print exec scrot -e
@@ -168,7 +168,7 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 #Colors
-set $bgr #13181b
+set $bgr #1d1f21
 set $fgr #f0f0f0
 set $urg #bf6257
 set $bor #2f3336
@@ -179,9 +179,8 @@ bar {
         status_command i3status -c ~/.config/i3/i3status.conf
     	position top
 		height 15
-        separator_symbol " "
-#		strip_workspace_numbers yes
-        font pango:Roboto 7
+        font pango:DejaVu Sans Mono 7
+
 	
 	colors {
 		separator 	$fgr
@@ -222,9 +221,9 @@ smart_borders on
 
 #Exit
 set $Locker i3lock && sleep 1
-set $mode_system L :  | S :  | P :  | R :  | E :  
+set $mode_system L: | S: | P: | R: | E: 
 mode "$mode_system" {
-    bindsym l exec --no-startup-id i3lock-fancy, mode "default"
+    bindsym l exec --no-startup-id lock, mode "default"
     bindsym s exec --no-startup-id $Lock systemctl suspend, mode "default"
     bindsym p exec --no-startup-id systemctl poweroff -i, mode "default"
     bindsym r exec --no-startup-id systemctl reboot, mode "default"

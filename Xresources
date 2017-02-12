@@ -1,37 +1,50 @@
-URxvt.font: xft:Roboto Mono:size=9
-URxvt.internalBorder: 50
-URxvt.letterSpace: 0
+!##################!
+!## Xft Settings ##!
+!##################!
 Xft.dpi: 96
 Xft.antialias: true
 Xft.hinting: true
 Xft.rgba: rgb
 Xft.autohint: 0
-Xft.hintstyle: hintslight
+Xft.hintstyle: hintsfull
 Xft.lcdfilter: lcddefault
-Xcursor.size: 0
+
+!####################!
+!## URxvt Settings ##!
+!####################!
+URxvt.font: xft:DejaVu Sans Mono for powerline:size=9
+URxvt.internalBorder: 50
+URxvt.letterSpace: -1
+URxvt.depth: 35
+URxvt.background: #1d1f21
+URxvt.foreground: #f0f0f0
 URxvt*cursorUnderline: true
 URxvt*underlineColor: #f0f0f0
 URxvt*transparent: false
-URxvt.depth: 35
-URxvt.background: #13181b
-URxvt.foreground: #f0f0f0
+
+!!SCROLLBAR
 URxvt*scrollBar: false
-URxvt*scrollstyle: plain
+URxvt*scrollstyle: rxvt
 URxvt*scroll_right: false
 URxvt*mouseWheelScrollPage: true
 URxvt*cursorBlink: true
 URxvt*saveLines: 5000
 
+!!PERL EXTENSIONS
 URxvt.keysym.Shift-Control-C: perl:clipboard:copy
 URxvt.keysym.Shift-Control-V: perl:clipboard:paste
-URxvt.iso14755: False
 URxvt.perl-ext-common: default,clipboard
+URxvt.urlLauncher: firefox
+URxvt.url-select.underline: true
 
-*urlLauncher: firefox
-*url-select.underline: true
+URxvt.iso14755: False
+URxvt.iso14755_52: False
 
+Xcursor.size: 0
+
+!!ROFI
 rofi.modi: run
-rofi.font: Roboto Mono 8
+rofi.font: DejaVu Sans Mono 7
 rofi.lines: 5
 rofi.width: 25
 rofi.columns: 1
@@ -39,21 +52,22 @@ rofi.opacity: 100
 rofi.separator-style: none
 rofi.hide-scrollbar: true
 rofi.bw: 0
-rofi.location: 0
-!rofi.xoffset: 0
-!rofi.yoffset: 0
+rofi.location: 1
+rofi.xoffset: 0
+rofi.yoffset: 12
 rofi.padding: 20
 rofi.eh: 1
 rofi.fuzzy: false
 rofi.color-enabled: true
-rofi.color-window: #13181b, argb:0002B36, #f0f0f0
-rofi.color-normal: #13181b, #f0f0f0, #13181b, #2f3336, #f0f0f0
-rofi.color-active: #13181b, #f0f0f0, #13181b, #39474A, #f0f0f0
-rofi.color-urgent: #13181b, #f0f0f0, #13181b, #a66959, #f0f0f0
+rofi.color-window: #1d1f21, argb:0002B36, #f0f0f0
+rofi.color-normal: #1d1f21, #f0f0f0, #1d1f21, #2f3336, #f0f0f0
+rofi.color-active: #1d1f21, #f0f0f0, #1d1f21, #39474A, #f0f0f0
+rofi.color-urgent: #1d1f21, #f0f0f0, #1d1f21, #a66959, #f0f0f0
 
-! DEPTHMOD 
+
+!! COLORS 
 ! Special
-*.background:  #13181b  
+*.background:  #1d1f21
 *.foreground:  #f0f0f0
 *.cursorColor: #f0f0f0
 !Black
