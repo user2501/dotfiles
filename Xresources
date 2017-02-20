@@ -12,7 +12,7 @@ Xft.lcdfilter: lcddefault
 !####################!
 !## URxvt Settings ##!
 !####################!
-URxvt.font: xft:DejaVu Sans Mono for powerline:size=9
+URxvt.font: xft:Monospace:size=9
 URxvt.internalBorder: 50
 URxvt.letterSpace: -1
 URxvt.depth: 35
@@ -44,7 +44,7 @@ Xcursor.size: 0
 
 !!ROFI
 rofi.modi: run
-rofi.font: DejaVu Sans Mono 7
+rofi.font: Monospace 7
 rofi.lines: 5
 rofi.width: 25
 rofi.columns: 1
