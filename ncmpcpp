@@ -47,10 +47,10 @@ mpd_crossfade_time = "1"
 ##
 audio_output {
 type "fifo"
- name "My FIFO"
- path "/tmp/mpd.fifo"
- format "44100:16:2"
- }
+name "My FIFO"
+path "/tmp/mpd.fifo"
+format "44100:16:2"
+}
 ##
 #
 ##
@@ -264,8 +264,7 @@ now_playing_suffix = "$2$/u$2"
 ## not available.
 ##
 #
-song_columns_list_format = "(10)[black]{l} (30)[blue]{a} (30)[green]{b} (30)[magenta]{t}"
-
+#song_columns_list_format = "(10)[blue]{a} (30)[white]{t} %r [magenta]{l}"
 #
 ##### various settings #####
 #
@@ -278,7 +277,7 @@ song_columns_list_format = "(10)[black]{l} (30)[blue]{a} (30)[green]{b} (30)[mag
 ##
 #execute_on_song_change = "mpc current > ~/.ncmpcpp/np.status"
 #
-#playlist_show_remaining_time = "yes"
+playlist_show_remaining_time = "no"
 #
 playlist_shorten_total_times = "no"
 #
@@ -311,7 +310,7 @@ progressbar_look = "───"
 #progressbar_look = "▀▀ "
 #progressbar_look = "▉▉▉"
 #
-progressbar_boldness = "no"
+progressbar_boldness = "yes"
 #progressbar_elapsed_boldness = "no"
 #
 default_place_to_search_in = "database" (database/playlist)
@@ -325,14 +324,13 @@ default_find_mode = "wrapped" (wrapped/normal)
 #
 default_tag_editor_pattern = "%n - %t"
 #
-header_visibility = "no"
+header_visibility = "yes"
 #
 statusbar_visibility = "yes"
 #
 titles_visibility = "no"
 #
-header_text_scrolling = "yes"
-#fancy_scrolling = "yes"
+header_text_scrolling = "no"
 #
 cyclic_scrolling = "no"
 #
@@ -468,7 +466,7 @@ empty_tag_color = "white"
 #
 header_window_color = "white"
 #
-volume_color = "blue"
+volume_color = "white"
 #
 state_line_color = "white"
 #
@@ -478,7 +476,7 @@ main_window_color = "blue"
 #
 #color1 = "red"
 #
-#color2 = "blue"
+#color2 = "white"
 #
 main_window_highlight_color = "white"
 #
