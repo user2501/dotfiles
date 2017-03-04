@@ -1,0 +1,52 @@
+[options]
+geometry = 730x430
+font = Hack 9
+allow_bold = true
+cursor_blink = system
+cursor_shape = underline
+clickable_url = true
+browser = firefox
+clickable_url = true
+filter_unmatched_urls = true
+dynamic_title = true
+scrollback_lines = 10000
+scroll_on_keystroke = true
+
+[colors]
+# special
+foreground      = #f0f0f0
+foreground_bold = #f0f0f0
+cursor          = #f0f0f0
+background      = #1d1f21
+
+# black
+color0  = #1d1f21
+color8  = #3b4044
+
+# red
+color1  = #bf6257
+color9  = #bf6257
+
+# green
+color2  = #93988a
+color10 = #93988a
+
+# yellow
+color3  = #b7a16c
+color11 = #b7a16c
+
+# blue
+color4  = #526872
+color12 = #526872
+
+# magenta
+color5  = #8a757e
+color13 = #8a757e
+
+# cyan
+color6  = #60867f
+color14 = #60867f
+
+# white
+color7  = #f0f0f0
+color15 = #f0f0f0
