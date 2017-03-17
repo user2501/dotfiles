@@ -14,7 +14,7 @@ function parse_git_branch() {
 	if [ ! "${BRANCH}" == "" ]
 	then
 		STAT=`parse_git_dirty`
-		echo " [${BRANCH}${STAT}]"
+		echo " ${BRANCH}${STAT} "
 	else
 		echo ""
 	fi
@@ -57,7 +57,7 @@ function parse_git_dirty {
 
 #PROMPT
 #PS1='[\u@\h \W]\$ '
-PS1="\[\e[1;37;44m\] \w\`parse_git_branch\` » \[\e[0m\] "
+PS1="\[\e[1;37;44m\] \W \[\e[1;37;42m\]\`parse_git_branch\`\[\e[1;37;44m\]\[\e[0;37;40m\] \[\e[0m\] "
 #PS1="\[\e[1;37;44m\] \w\[\e[1;37;44m\] » \[\e[0m\] "
 #PS1="\[\e[1;37;44m\] \W \[\e[1;37;44m\]\[\e[0m\]\[\e[1;34m\]\[\e[0m\] "
 
