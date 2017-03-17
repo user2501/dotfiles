@@ -30,7 +30,7 @@
 # number of cpu samples to average
 # set to 1 to disable averaging
 #cpu_avg_samples 2
-
+#
 # JSON for i3bar
 #
 # [{ "full_text" : " ${mpd_artist} - ${mpd_title} " , "color" : "\#f0f0f0" },
