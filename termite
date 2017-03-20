@@ -1,5 +1,14 @@
+##############################################################
+## ████████╗███████╗██████╗ ███╗   ███╗██╗████████╗███████╗ ##
+## ╚══██╔══╝██╔════╝██╔══██╗████╗ ████║██║╚══██╔══╝██╔════╝ ##
+##    ██║   █████╗  ██████╔╝██╔████╔██║██║   ██║   █████╗   ##
+##    ██║   ██╔══╝  ██╔══██╗██║╚██╔╝██║██║   ██║   ██╔══╝   ##
+##    ██║   ███████╗██║  ██║██║ ╚═╝ ██║██║   ██║   ███████╗ ##
+##    ╚═╝   ╚══════╝╚═╝  ╚═╝╚═╝     ╚═╝╚═╝   ╚═╝   ╚══════╝ ##
+##############################################################                                                       
+
 [options]
-geometry = 730x430
+geometry = 670x430
 font = Hack 9
 allow_bold = true
 cursor_blink = system
@@ -14,39 +23,40 @@ scroll_on_keystroke = true
 
 [colors]
 # special
-foreground      = #f0f0f0
-foreground_bold = #f0f0f0
-cursor          = #f0f0f0
+foreground      = #c8c5c6
+foreground_bold = #c8c5c6
+cursor          = #c8c5c6
 background      = #1d1f21
 
 # black
-color0  = #1d1f21
-color8  = #3b4044
+color0  = #273034
+color8  = #464c50
 
 # red
-color1  = #bf6257
-color9  = #bf6257
+color1  = #804f4e
+color9  = #804f4e
 
 # green
-color2  = #93988a
-color10 = #93988a
+color2  = #68786c
+color10 = #68786c
 
 # yellow
-color3  = #b7a16c
-color11 = #b7a16c
+color3  = #aba685
+color11 = #aba685
 
 # blue
-color4  = #526872
-color12 = #526872
+color4  = #47575f
+color12 = #47575f
 
 # magenta
-color5  = #8a757e
-color13 = #8a757e
+color5  = #74636a
+color13 = #74636a
 
 # cyan
-color6  = #60867f
-color14 = #60867f
+color6  = #526562
+color14 = #526562
 
 # white
-color7  = #f0f0f0
-color15 = #f0f0f0
+color7  = #c8c5c6
+color15 = #c8c5c6
+

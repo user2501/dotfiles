@@ -1,4 +1,14 @@
+"###############################################
+"##   ██╗   ██╗██╗███╗   ███╗██████╗  ██████╗ ##
+"##   ██║   ██║██║████╗ ████║██╔══██╗██╔════╝ ##
+"##   ██║   ██║██║██╔████╔██║██████╔╝██║      ##
+"##   ╚██╗ ██╔╝██║██║╚██╔╝██║██╔══██╗██║      ##
+"## ██╗╚████╔╝ ██║██║ ╚═╝ ██║██║  ██║╚██████╗ ##
+"## ╚═╝ ╚═══╝  ╚═╝╚═╝     ╚═╝╚═╝  ╚═╝ ╚═════╝ ##
+"###############################################
+"
 syntax on
+filetype plugin indent on
 set encoding=utf-8
 scriptencoding utf-8
 set background=dark
@@ -7,7 +17,7 @@ colorscheme shblah
 
 set anti enc=utf-8
 set number
-set relativenumber
+"set relativenumber
 set cursorline
 set tabstop=4
 set shiftwidth=4
@@ -18,10 +28,16 @@ set expandtab
 set cmdheight=1
 set laststatus=2
 set ruler
+set noshowmode
+
+map <C-h> <C-w>h<C-w>=
+map <C-l> <C-w>l<C-w>=
+map <C-j> <C-w>j<C-w>=
+map <C-k> <C-w>k<C-w>=
 
 let g:lightline = {
       \ 'colorscheme': 'seoul256',
-      \ 'mode_map': { 'c': 'NORMAL' },
+     \ 'mode_map': { 'c': 'NORMAL' },
       \ 'active': {
       \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ]
       \ },
@@ -36,7 +52,7 @@ let g:lightline = {
       \   'mode': 'LightlineMode',
       \ },
       \ 'separator': { 'left': ' ', 'right': ' ' },
-      \ 'subseparator': { 'left': ' ', 'right': ' ' }
+      \ 'subseparator': { 'left': '|', 'right': '|' }
       \ }
 
 function! LightlineModified()
@@ -51,7 +67,7 @@ function! LightlineFilename()
   return ('' != LightlineReadonly() ? LightlineReadonly() . ' ' : '') .
         \ (&ft == 'vimfiler' ? vimfiler#get_status_string() :
         \  &ft == 'unite' ? unite#get_status_string() :
-        \  &ft == 'vimshell' ? vimshell#get_status_string() :
+       \  &ft == 'vimshell' ? vimshell#get_status_string() :
         \ '' != expand('%:t') ? expand('%:t') : '[No Name]') .
         \ ('' != LightlineModified() ? ' ' . LightlineModified() : '')
 endfunction
@@ -79,3 +95,5 @@ endfunction
 function! LightlineMode()
   return winwidth(0) > 60 ? lightline#mode() : ''
 endfunction
+
+call pathogen#infect()
