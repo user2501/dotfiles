@@ -8,92 +8,43 @@
 "###############################################
 "
 syntax on
+colorscheme shblah
+set background=dark
 filetype plugin indent on
 set encoding=utf-8
 scriptencoding utf-8
-set background=dark
 
-colorscheme shblah
-
-set anti enc=utf-8
+set title
+set autoindent
+set smartindent
 set number
-"set relativenumber
 set cursorline
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
 set expandtab
-
-"StatusLine
 set cmdheight=1
 set laststatus=2
 set ruler
-set noshowmode
+set showmode
+set hidden
+set wildmenu
+
+hi User1 ctermfg=white  ctermbg=none
+hi User2 ctermfg=white  ctermbg=black
+hi User3 ctermfg=white  ctermbg=none
+
+set statusline=
+set statusline+=%2*\[%f]  "Filename
+set statusline+=%2*\%m%r%h%w  "Flags
+set statusline+=%2*\ %=\  "Blank Space
+set statusline+=%2*\%y  "Filetype
+set statusline+=%2*\[%{strlen(&fenc)?&fenc:&enc}]	"Encoding
+"set statusline+=%2*\[%{&ff}]  "Format
+set statusline+=%2*\%=\[%l:%L\ %02c] "Lines and columns
 
 map <C-h> <C-w>h<C-w>=
 map <C-l> <C-w>l<C-w>=
 map <C-j> <C-w>j<C-w>=
 map <C-k> <C-w>k<C-w>=
 
-let g:lightline = {
-      \ 'colorscheme': 'seoul256',
-     \ 'mode_map': { 'c': 'NORMAL' },
-      \ 'active': {
-      \   'left': [ [ 'mode', 'paste' ], [ 'fugitive', 'filename' ] ]
-      \ },
-      \ 'component_function': {
-      \   'modified': 'LightlineModified',
-      \   'readonly': 'LightlineReadonly',
-      \   'fugitive': 'LightlineFugitive',
-      \   'filename': 'LightlineFilename',
-      \   'fileformat': 'LightlineFileformat',
-      \   'filetype': 'LightlineFiletype',
-      \   'fileencoding': 'LightlineFileencoding',
-      \   'mode': 'LightlineMode',
-      \ },
-      \ 'separator': { 'left': ' ', 'right': ' ' },
-      \ 'subseparator': { 'left': '|', 'right': '|' }
-      \ }
-
-function! LightlineModified()
-  return &ft =~ 'help\|vimfiler\|gundo' ? '' : &modified ? '+' : &modifiable ? '' : '-'
-endfunction
-
-function! LightlineReadonly()
-  return &ft !~? 'help\|vimfiler\|gundo' && &readonly ? '' : ''
-endfunction
-
-function! LightlineFilename()
-  return ('' != LightlineReadonly() ? LightlineReadonly() . ' ' : '') .
-        \ (&ft == 'vimfiler' ? vimfiler#get_status_string() :
-        \  &ft == 'unite' ? unite#get_status_string() :
-       \  &ft == 'vimshell' ? vimshell#get_status_string() :
-        \ '' != expand('%:t') ? expand('%:t') : '[No Name]') .
-        \ ('' != LightlineModified() ? ' ' . LightlineModified() : '')
-endfunction
-
-function! LightlineFugitive()
-  if &ft !~? 'vimfiler\|gundo' && exists("*fugitive#head")
-    let branch = fugitive#head()
-    return branch !=# '' ? ' '.branch : ''
-  endif
-  return ''
-endfunction
-
-function! LightlineFileformat()
-  return winwidth(0) > 70 ? &fileformat : ''
-endfunction
-
-function! LightlineFiletype()
-  return winwidth(0) > 70 ? (&filetype !=# '' ? &filetype : 'no ft') : ''
-endfunction
-
-function! LightlineFileencoding()
-  return winwidth(0) > 70 ? (&fenc !=# '' ? &fenc : &enc) : ''
-endfunction
-
-function! LightlineMode()
-  return winwidth(0) > 60 ? lightline#mode() : ''
-endfunction
-
-call pathogen#infect()
